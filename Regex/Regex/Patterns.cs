@@ -13,7 +13,8 @@ namespace RegexPatternMatching
         public String REGEX_LASTNAME = @"^[A-Z]{3}$"; //last name contains capital 3 letters
         public string REGEX_EMAIL = @"^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";//2-3 for com in co
         public string REGEX_PHONENO = @"^[6-9]{1}[0-9]{9}$"; // starting number between 6 to 9
-        public string REGEX_PASSWORD = "(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";
+        public string REGEX_PASSWORD = "(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-])[a-zA-Z0-9!@#$%^&*()_+=-]{8,}$"; // password contain charcter,digit,special charcter
+                                                                                                                     //Upper and lower latters
         public bool ValidateFirstName(string name)
         {
 
