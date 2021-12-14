@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("*************** Welcome To Regex **********************");
 using RegexPatternMatching;
-Console.Write("Select Number:\n1)FirstName\n2)LastName\n3)Email\n4)PhoneNumber");
+Console.Write("Select Number:\n1)FirstName\n2)LastName\n3)Email\n4)PhoneNumber\n5)Password");
 int option = Convert.ToInt32(Console.ReadLine());
 Patterns pattern = new Patterns();
 
@@ -27,6 +27,12 @@ switch (option)
         string phoneno = Console.ReadLine();
         Console.WriteLine("PhoneNumber:" + pattern.ValidatePhoneNo(phoneno));
         break;
+    case 5:
+        Console.Write("Enter Password: ");
+        string password = Console.ReadLine();
+        Console.WriteLine("Password:" + pattern.ValidatePassword(password));
+        break;
+
 
 
 
